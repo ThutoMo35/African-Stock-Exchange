@@ -28,6 +28,10 @@ ever considering live capital.
 
 ## Architecture
 
+For the full system blueprint (layer-by-layer breakdown, extension points, and the
+plan → execute → report → review loop the automation runs on), see **[ARCHITECTURE.md](ARCHITECTURE.md)**.
+For the phased roadmap and daily target definition, see **[TODO.md](TODO.md)**.
+
 ```
                          ┌─────────────────────────┐
                          │   Feature Engineering    │
@@ -109,6 +113,13 @@ Run workflow**):
    - `reports/history.csv` — one row per exchange per day, for tracking metrics over time
 5. Commits and pushes the updated `reports/` back to the repo automatically
 6. Uploads the same report as a downloadable workflow artifact (kept 90 days)
+
+Each run also self-checks against a defined **daily target** (`config.py::DailyTarget`:
+minimum average Sharpe, maximum average drawdown, required success rate) and reports
+**MET/MISSED** at the top of `reports/latest.md`, logged over time in
+`reports/targets_history.csv`. It separately reports roadmap progress by parsing the
+checkboxes in `TODO.md`, so every daily report shows exactly what fraction of the plan
+is done and what task is next — see `ARCHITECTURE.md` §3 for how this loop fits together.
 
 To change the schedule, edit the `cron` line in the workflow file. To change which/how many
 tickers run daily, pass `tickers_per_exchange` to `run_daily_build()` in

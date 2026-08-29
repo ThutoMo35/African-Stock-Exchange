@@ -45,9 +45,24 @@ class ModelConfig:
 
 
 @dataclass
+class DailyTarget:
+    """Defines what 'success' means for a single automated daily run, so the
+    build can self-report pass/fail rather than just dumping numbers.
+
+    These thresholds are deliberately conservative starting points for a
+    system still running on synthetic data — tighten them once real market
+    data is wired in via a custom DataLoader.
+    """
+    min_avg_sharpe: float = 0.20          # avg out-of-sample Sharpe across the daily universe
+    max_avg_drawdown_pct: float = -35.0   # avg max drawdown must not exceed (be more negative than) this
+    min_success_rate: float = 1.0         # fraction of exchange targets that must run without error
+
+
+@dataclass
 class AppConfig:
     model: ModelConfig = field(default_factory=ModelConfig)
     exchanges: Dict[str, dict] = field(default_factory=load_exchanges)
+    daily_target: DailyTarget = field(default_factory=DailyTarget)
 
 
 CONFIG = AppConfig()
