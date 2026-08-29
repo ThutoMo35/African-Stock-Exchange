@@ -123,10 +123,12 @@ Concretely:
 
 | Interface | Current implementation | Where Phase 1+ work attaches |
 |---|---|---|
-| `afx_ai.data.loader.DataLoader` | `SyntheticDataLoader`, `CSVDataLoader` | Implement `.load(ticker)` against a real vendor/broker API |
+| `afx_ai.data.loader.DataLoader` | `SyntheticDataLoader`, `CSVDataLoader`, `HTTPJSONDataLoader` (generic vendor, mock-tested), `CachedDataLoader` (TTL disk cache wrapper) | Point `HTTPJSONDataLoader` at a real vendor endpoint from an environment with outbound network access; wrap it in `CachedDataLoader` |
+| `afx_ai.data.quality` | `run_quality_checks`, `adjust_for_suspected_splits` | Feed real vendor output through this before `build_features()` |
 | `afx_ai.models.base.BaseModel` | 4 ensemble members | Add new members (e.g. a sentiment model) without touching the ensemble/pipeline code |
 | `afx_ai.ensemble.stacking.StackingEnsemble` | Logistic regression meta-learner | Swap in a gradient-boosted or neural meta-learner; add per-regime weighting |
 | `afx_ai.backtest.engine.run_backtest` | Binary long/flat | Extend to variable position sizing, multi-asset portfolios (Phase 3) |
+| `afx_ai.backtest.walkforward` | `walk_forward_splits`, `run_walkforward_pipeline()` | Use for model validation before promoting a new ensemble version (Phase 2 champion/challenger) |
 | `afx_ai.config.DailyTarget` | Sharpe/drawdown/success-rate thresholds | Tighten thresholds, add new checks (e.g. data-drift) as Phase 4 lands |
 
 ## 5. Non-functional constraints

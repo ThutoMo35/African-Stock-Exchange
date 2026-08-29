@@ -25,15 +25,16 @@ Check an item by changing `- [ ]` to `- [x]` when it's done and merged.
 
 ## Phase 1 — Real data integration
 
-- [ ] Implement a `DataLoader` against one real vendor/exchange feed (start with one exchange, e.g. JSE)
-- [ ] Add data quality checks (missing bars, stale prices, corporate action / stock-split handling)
-- [ ] Add a caching layer so repeated daily runs don't re-fetch unchanged history
+- [x] Generic vendor HTTP/JSON `DataLoader` implemented with retry/backoff, unit-tested against mocked responses (`src/afx_ai/data/vendor.py`, `tests/test_vendor_loader.py`)
+- [x] Add data quality checks (missing bars, stale prices, corporate action / stock-split detection) — `src/afx_ai/data/quality.py`
+- [x] Add a caching layer so repeated daily runs don't re-fetch unchanged history — `src/afx_ai/data/cache.py`
 - [ ] Extend `config/exchanges.yaml` tickers from a handful of samples to a full listed-universe pull
 - [ ] Add fundamental data features (earnings, P/E, sector) alongside technical features
+- [ ] Live validation against a real JSE/NGX/NSE vendor endpoint — **blocked**: this build environment's network egress is restricted to package registries and GitHub, so it cannot reach financial data vendors. Point `HTTPJSONDataLoader.base_url` at a real vendor and run from an environment with outbound access to validate end-to-end.
 
 ## Phase 2 — Model quality & validation
 
-- [ ] Replace the single train/test split with walk-forward (rolling-origin) cross-validation
+- [x] Replace the single train/test split with walk-forward (rolling-origin) cross-validation — `src/afx_ai/backtest/walkforward.py`, `run_walkforward_pipeline()`. (The daily automated build still uses the faster single-split `run_pipeline()` to keep CI fast; walk-forward is available for deeper validation runs.)
 - [ ] Add hyperparameter search (Optuna or similar) for each ensemble member
 - [ ] Track per-member and blended accuracy/AUC over time, not just Sharpe
 - [ ] Add feature importance / SHAP explainability reporting per model
