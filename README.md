@@ -1,5 +1,7 @@
 # African Stock Exchange AI — Ensemble Intelligence System
 
+[![Daily AFX AI Build](https://github.com/ThutoMo35/African-Stock-Exchange/actions/workflows/daily-build.yml/badge.svg)](https://github.com/ThutoMo35/African-Stock-Exchange/actions/workflows/daily-build.yml)
+
 An artificially intelligent, multi-model **ensemble** system for signal generation and
 research across African equity markets (JSE, NGX, NSE Kenya, EGX, GSE, BRVM, and others).
 
@@ -89,6 +91,33 @@ pytest -q
 
 # Serve predictions over HTTP
 uvicorn afx_ai.api.server:app --reload
+```
+
+## Automated daily build
+
+`.github/workflows/daily-build.yml` runs the full pipeline automatically every day at
+03:00 UTC (and on every push to `main`, and on-demand via **Actions → Daily AFX AI Build →
+Run workflow**):
+
+1. Installs dependencies
+2. Runs the test suite (`pytest`) as a safety gate — the build stops here if it fails
+3. Runs `scripts/daily_build.py`, which retrains the ensemble on one representative ticker
+   per configured exchange and backtests out-of-sample
+4. Writes results to `reports/`:
+   - `reports/YYYY-MM-DD.json` — full result for that day
+   - `reports/latest.json` / `reports/latest.md` — most recent run (human + machine readable)
+   - `reports/history.csv` — one row per exchange per day, for tracking metrics over time
+5. Commits and pushes the updated `reports/` back to the repo automatically
+6. Uploads the same report as a downloadable workflow artifact (kept 90 days)
+
+To change the schedule, edit the `cron` line in the workflow file. To change which/how many
+tickers run daily, pass `tickers_per_exchange` to `run_daily_build()` in
+`scripts/daily_build.py`.
+
+Run it manually at any time:
+
+```bash
+python scripts/daily_build.py
 ```
 
 ## Plugging in real data

@@ -1,0 +1,8 @@
+run_date,exchange,ticker,sharpe_ratio,cagr_pct,max_drawdown_pct,avg_exposure,num_trades,status
+2026-08-29,JSE,NPN,0.063,-5.35,-21.65,0.5143,57,ok
+2026-08-29,NGX,DANGCEM,1.506,41.36,-12.67,0.3857,50,ok
+2026-08-29,NSE_KE,SCOM,-0.454,-17.64,-30.67,0.5429,44,ok
+2026-08-29,EGX,COMI,-1.371,-25.01,-27.06,0.5357,62,ok
+2026-08-29,GSE,MTNGH,-0.344,-11.17,-18.49,0.4643,59,ok
+2026-08-29,BRVM,SNTS,3.503,109.71,-9.43,0.5429,55,ok
+2026-08-29,CSE_MA,IAM,-0.479,-12.71,-14.17,0.4214,59,ok

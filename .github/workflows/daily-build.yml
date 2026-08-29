@@ -1,0 +1,67 @@
+name: Daily AFX AI Build
+
+# Runs the full ensemble pipeline once a day, generates a report, commits it
+# back to the repo, and fails the workflow (so you get notified) if any
+# target errors out. Also runs the test suite first as a safety gate.
+
+on:
+  schedule:
+    # 03:00 UTC daily. GitHub may delay scheduled runs slightly under load.
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}   # allows manual "Run workflow" trigger from the Actions tab
+  push:
+    branches: [main]      # also validate on every push to main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-afx-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test suite
+        run: PYTHONPATH=src python -m pytest -q
+
+      - name: Run daily ensemble build
+        run: PYTHONPATH=src python scripts/daily_build.py
+
+      - name: Upload report as workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: afx-daily-report-${{ github.run_id }}
+          path: reports/
+          retention-days: 90
+
+      - name: Commit and push updated reports
+        if: always()
+        run: |
+          git config user.name "afx-ai-bot"
+          git config user.email "afx-ai-bot@users.noreply.github.com"
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "Automated daily build report: $(date -u +'%Y-%m-%d')"
+            git push
+          fi

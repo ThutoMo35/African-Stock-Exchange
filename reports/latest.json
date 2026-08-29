@@ -1,0 +1,199 @@
+{
+  "run_date": "2026-08-29",
+  "run_started_utc": "2026-08-29T19:05:10.754708+00:00",
+  "run_finished_utc": "2026-08-29T19:06:06.548733+00:00",
+  "n_targets": 7,
+  "n_succeeded": 7,
+  "n_failed": 0,
+  "results": [
+    {
+      "exchange": "JSE",
+      "ticker": "NPN",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.560849965781268,
+        "lstm": 0.004683831774056697,
+        "transformer": 0.012227418121055286,
+        "stat_arb": 0.03265419058440248
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": 0.063,
+        "cagr": -5.35,
+        "max_drawdown_pct": -21.65,
+        "total_return_pct": -3.01
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": 0.36,
+        "cagr": 7.05,
+        "max_drawdown_pct": -24.35,
+        "total_return_pct": 3.86
+      },
+      "avg_exposure": 0.5142857142857142,
+      "num_trades": 57,
+      "status": "ok"
+    },
+    {
+      "exchange": "NGX",
+      "ticker": "DANGCEM",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.58119020335075,
+        "lstm": 0.013259967059112686,
+        "transformer": -0.01630301870886325,
+        "stat_arb": 0.007610580040308814
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": 1.506,
+        "cagr": 41.36,
+        "max_drawdown_pct": -12.67,
+        "total_return_pct": 21.2
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": 1.941,
+        "cagr": 76.56,
+        "max_drawdown_pct": -14.36,
+        "total_return_pct": 37.14
+      },
+      "avg_exposure": 0.38571428571428573,
+      "num_trades": 50,
+      "status": "ok"
+    },
+    {
+      "exchange": "NSE_KE",
+      "ticker": "SCOM",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.521339743685509,
+        "lstm": 0.007919200970449878,
+        "transformer": 0.012254295922881034,
+        "stat_arb": -0.0025538977932408474
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": -0.454,
+        "cagr": -17.64,
+        "max_drawdown_pct": -30.67,
+        "total_return_pct": -10.22
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": -0.935,
+        "cagr": -48.45,
+        "max_drawdown_pct": -43.53,
+        "total_return_pct": -30.79
+      },
+      "avg_exposure": 0.5428571428571428,
+      "num_trades": 44,
+      "status": "ok"
+    },
+    {
+      "exchange": "EGX",
+      "ticker": "COMI",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.543126814859235,
+        "lstm": 0.005911816345614777,
+        "transformer": 0.006668215557981439,
+        "stat_arb": 0.018574252726765765
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": -1.371,
+        "cagr": -25.01,
+        "max_drawdown_pct": -27.06,
+        "total_return_pct": -14.78
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": -0.319,
+        "cagr": -15.49,
+        "max_drawdown_pct": -26.43,
+        "total_return_pct": -8.93
+      },
+      "avg_exposure": 0.5357142857142857,
+      "num_trades": 62,
+      "status": "ok"
+    },
+    {
+      "exchange": "GSE",
+      "ticker": "MTNGH",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.544809641046573,
+        "lstm": 0.011507852661810293,
+        "transformer": 0.004429223245627874,
+        "stat_arb": -0.05521364224696402
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": -0.344,
+        "cagr": -11.17,
+        "max_drawdown_pct": -18.49,
+        "total_return_pct": -6.37
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": 1.16,
+        "cagr": 57.89,
+        "max_drawdown_pct": -21.69,
+        "total_return_pct": 28.88
+      },
+      "avg_exposure": 0.4642857142857143,
+      "num_trades": 59,
+      "status": "ok"
+    },
+    {
+      "exchange": "BRVM",
+      "ticker": "SNTS",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.37372560656057,
+        "lstm": 0.0065818933123608205,
+        "transformer": 0.009570114458828017,
+        "stat_arb": -0.01917639085743514
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": 3.503,
+        "cagr": 109.71,
+        "max_drawdown_pct": -9.43,
+        "total_return_pct": 50.9
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": 3.866,
+        "cagr": 192.04,
+        "max_drawdown_pct": -10.85,
+        "total_return_pct": 81.38
+      },
+      "avg_exposure": 0.5428571428571428,
+      "num_trades": 55,
+      "status": "ok"
+    },
+    {
+      "exchange": "CSE_MA",
+      "ticker": "IAM",
+      "n_train": 560,
+      "n_test": 140,
+      "meta_weights": {
+        "gradient_boost": 8.35564061850942,
+        "lstm": 0.010516273281680946,
+        "transformer": 0.0186490834162444,
+        "stat_arb": -0.013029378884304266
+      },
+      "strategy_metrics": {
+        "sharpe_ratio": -0.479,
+        "cagr": -12.71,
+        "max_drawdown_pct": -14.17,
+        "total_return_pct": -7.27
+      },
+      "buy_hold_metrics": {
+        "sharpe_ratio": 0.775,
+        "cagr": 14.72,
+        "max_drawdown_pct": -24.59,
+        "total_return_pct": 7.93
+      },
+      "avg_exposure": 0.42142857142857143,
+      "num_trades": 59,
+      "status": "ok"
+    }
+  ]
+}
