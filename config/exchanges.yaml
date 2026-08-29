@@ -1,0 +1,36 @@
+exchanges:
+  JSE:
+    name: Johannesburg Stock Exchange
+    country: South Africa
+    currency: ZAR
+    sample_tickers: [NPN, PRX, BHP, SOL, MTN, FSR]
+  NGX:
+    name: Nigerian Exchange
+    country: Nigeria
+    currency: NGN
+    sample_tickers: [DANGCEM, MTNN, GTCO, ZENITHBANK, BUACEMENT]
+  NSE_KE:
+    name: Nairobi Securities Exchange
+    country: Kenya
+    currency: KES
+    sample_tickers: [SCOM, EQTY, KCB, EABL, COOP]
+  EGX:
+    name: Egyptian Exchange
+    country: Egypt
+    currency: EGP
+    sample_tickers: [COMI, HRHO, TMGH, EAST, SWDY]
+  GSE:
+    name: Ghana Stock Exchange
+    country: Ghana
+    currency: GHS
+    sample_tickers: [MTNGH, GCB, EGL, TOTAL]
+  BRVM:
+    name: Bourse Régionale des Valeurs Mobilières
+    country: West Africa (regional)
+    currency: XOF
+    sample_tickers: [SNTS, ONTBF, SGBC]
+  CSE_MA:
+    name: Casablanca Stock Exchange
+    country: Morocco
+    currency: MAD
+    sample_tickers: [IAM, ATW, BCP, CIH]
