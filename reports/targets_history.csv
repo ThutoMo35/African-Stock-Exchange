@@ -21,3 +21,4 @@ run_date,target_met,avg_sharpe,avg_max_drawdown_pct,success_rate,roadmap_done,ro
 2026-09-17,False,-0.3739,-23.5486,1.0,15,38,39.5
 2026-09-18,True,0.284,-19.7514,1.0,15,38,39.5
 2026-09-19,False,-0.2929,-20.1414,1.0,15,38,39.5
+2026-09-20,False,0.1986,-21.88,1.0,15,38,39.5
