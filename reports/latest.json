@@ -1,7 +1,7 @@
 {
-  "run_date": "2026-10-14",
-  "run_started_utc": "2026-10-14T08:20:25.098925+00:00",
-  "run_finished_utc": "2026-10-14T08:20:45.301960+00:00",
+  "run_date": "2026-10-15",
+  "run_started_utc": "2026-10-15T07:57:26.522097+00:00",
+  "run_finished_utc": "2026-10-15T07:57:49.241697+00:00",
   "n_targets": 7,
   "n_succeeded": 7,
   "n_failed": 0,
@@ -12,25 +12,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.51041671615837,
-        "lstm": -0.005113639939733572,
-        "transformer": -0.0005048621786888762,
-        "stat_arb": 0.0175035835272586
+        "gradient_boost": 8.431642977965142,
+        "lstm": 0.0038072952643919775,
+        "transformer": 0.014828633170035445,
+        "stat_arb": -0.06170271541205452
       },
       "strategy_metrics": {
-        "sharpe_ratio": 0.281,
-        "cagr": 3.88,
-        "max_drawdown_pct": -12.36,
-        "total_return_pct": 2.14
+        "sharpe_ratio": -0.645,
+        "cagr": -18.42,
+        "max_drawdown_pct": -23.56,
+        "total_return_pct": -10.7
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": 0.568,
-        "cagr": 16.39,
-        "max_drawdown_pct": -16.25,
-        "total_return_pct": 8.8
+        "sharpe_ratio": -1.681,
+        "cagr": -53.65,
+        "max_drawdown_pct": -41.16,
+        "total_return_pct": -34.77
       },
-      "avg_exposure": 0.5142857142857142,
-      "num_trades": 53,
+      "avg_exposure": 0.4928571428571429,
+      "num_trades": 62,
       "status": "ok"
     },
     {
@@ -39,25 +39,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.431322429571315,
-        "lstm": 0.0032086400711513396,
-        "transformer": 0.0002005686794359727,
-        "stat_arb": -0.043737269513266765
+        "gradient_boost": 8.416496980809537,
+        "lstm": 0.0016771902159702645,
+        "transformer": 0.0039008858098868032,
+        "stat_arb": 0.027933767595202084
       },
       "strategy_metrics": {
-        "sharpe_ratio": 1.163,
-        "cagr": 19.74,
-        "max_drawdown_pct": -8.08,
-        "total_return_pct": 10.53
+        "sharpe_ratio": 0.94,
+        "cagr": 27.74,
+        "max_drawdown_pct": -16.74,
+        "total_return_pct": 14.57
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": 1.771,
-        "cagr": 48.12,
-        "max_drawdown_pct": -13.64,
-        "total_return_pct": 24.39
+        "sharpe_ratio": 1.237,
+        "cagr": 59.33,
+        "max_drawdown_pct": -19.15,
+        "total_return_pct": 29.54
       },
-      "avg_exposure": 0.4714285714285714,
-      "num_trades": 62,
+      "avg_exposure": 0.4,
+      "num_trades": 56,
       "status": "ok"
     },
     {
@@ -66,25 +66,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.422998528109677,
-        "lstm": -0.009667689230474204,
-        "transformer": -0.010989818633913476,
-        "stat_arb": 0.05008350453685874
+        "gradient_boost": 8.595738029244107,
+        "lstm": 0.015746021600278805,
+        "transformer": 0.02838962732673054,
+        "stat_arb": 0.0045611030153269345
       },
       "strategy_metrics": {
-        "sharpe_ratio": -1.652,
-        "cagr": -37.69,
-        "max_drawdown_pct": -29.4,
-        "total_return_pct": -23.11
+        "sharpe_ratio": 1.212,
+        "cagr": 36.88,
+        "max_drawdown_pct": -17.24,
+        "total_return_pct": 19.05
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": -1.139,
-        "cagr": -41.19,
-        "max_drawdown_pct": -35.37,
-        "total_return_pct": -25.54
+        "sharpe_ratio": 2.851,
+        "cagr": 194.99,
+        "max_drawdown_pct": -24.45,
+        "total_return_pct": 82.39
       },
-      "avg_exposure": 0.5642857142857143,
-      "num_trades": 55,
+      "avg_exposure": 0.45,
+      "num_trades": 52,
       "status": "ok"
     },
     {
@@ -93,25 +93,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.468159312035276,
-        "lstm": 0.06412383464606457,
-        "transformer": 0.004270737600091123,
-        "stat_arb": 0.03023869989060909
+        "gradient_boost": 8.545412477861865,
+        "lstm": 0.005442047787311737,
+        "transformer": 0.0040266470901554954,
+        "stat_arb": -0.027231820132170688
       },
       "strategy_metrics": {
-        "sharpe_ratio": 0.073,
-        "cagr": -6.5,
-        "max_drawdown_pct": -27.93,
-        "total_return_pct": -3.66
+        "sharpe_ratio": -0.14,
+        "cagr": -4.92,
+        "max_drawdown_pct": -13.74,
+        "total_return_pct": -2.77
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": 1.24,
-        "cagr": 47.7,
-        "max_drawdown_pct": -27.21,
-        "total_return_pct": 24.2
+        "sharpe_ratio": 0.566,
+        "cagr": 14.78,
+        "max_drawdown_pct": -14.07,
+        "total_return_pct": 7.96
       },
-      "avg_exposure": 0.4357142857142857,
-      "num_trades": 41,
+      "avg_exposure": 0.4928571428571429,
+      "num_trades": 63,
       "status": "ok"
     },
     {
@@ -120,24 +120,24 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.451817550385062,
-        "lstm": -0.0032645992699313975,
-        "transformer": 0.0005780872397291104,
-        "stat_arb": -0.00962653173633966
+        "gradient_boost": 8.494399637042552,
+        "lstm": 0.004219108354889211,
+        "transformer": 0.0030877409772357813,
+        "stat_arb": 0.0002234179001560383
       },
       "strategy_metrics": {
-        "sharpe_ratio": -0.353,
-        "cagr": -12.65,
-        "max_drawdown_pct": -13.8,
-        "total_return_pct": -7.24
+        "sharpe_ratio": -1.517,
+        "cagr": -32.25,
+        "max_drawdown_pct": -24.14,
+        "total_return_pct": -19.45
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": -1.063,
-        "cagr": -38.4,
-        "max_drawdown_pct": -36.44,
-        "total_return_pct": -23.6
+        "sharpe_ratio": -2.108,
+        "cagr": -51.46,
+        "max_drawdown_pct": -39.06,
+        "total_return_pct": -33.07
       },
-      "avg_exposure": 0.34285714285714286,
+      "avg_exposure": 0.45,
       "num_trades": 38,
       "status": "ok"
     },
@@ -147,25 +147,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.494373228392607,
-        "lstm": 0.0005204966091258401,
-        "transformer": 0.006601482700202425,
-        "stat_arb": -0.024338460126323756
+        "gradient_boost": 8.544708939115258,
+        "lstm": 0.008299658455310006,
+        "transformer": 0.01235725826205648,
+        "stat_arb": 0.01595307102640579
       },
       "strategy_metrics": {
-        "sharpe_ratio": 0.552,
-        "cagr": 10.25,
-        "max_drawdown_pct": -18.79,
-        "total_return_pct": 5.57
+        "sharpe_ratio": 0.837,
+        "cagr": 17.43,
+        "max_drawdown_pct": -7.37,
+        "total_return_pct": 9.33
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": 0.325,
-        "cagr": -2.73,
-        "max_drawdown_pct": -25.47,
-        "total_return_pct": -1.53
+        "sharpe_ratio": 0.409,
+        "cagr": 8.88,
+        "max_drawdown_pct": -17.38,
+        "total_return_pct": 4.84
       },
-      "avg_exposure": 0.5642857142857143,
-      "num_trades": 55,
+      "avg_exposure": 0.5571428571428572,
+      "num_trades": 53,
       "status": "ok"
     },
     {
@@ -174,25 +174,25 @@
       "n_train": 560,
       "n_test": 140,
       "meta_weights": {
-        "gradient_boost": 8.528009495642204,
-        "lstm": -0.017277397553811136,
-        "transformer": -0.019808596735928503,
-        "stat_arb": 0.04256056272479716
+        "gradient_boost": 8.5140724367178,
+        "lstm": 0.02035000915613552,
+        "transformer": 0.02905644900464737,
+        "stat_arb": 0.004705984524428377
       },
       "strategy_metrics": {
-        "sharpe_ratio": 1.3,
-        "cagr": 55.05,
-        "max_drawdown_pct": -12.07,
-        "total_return_pct": 27.59
+        "sharpe_ratio": -0.675,
+        "cagr": -23.54,
+        "max_drawdown_pct": -31.28,
+        "total_return_pct": -13.85
       },
       "buy_hold_metrics": {
-        "sharpe_ratio": -0.757,
-        "cagr": -37.99,
-        "max_drawdown_pct": -48.94,
-        "total_return_pct": -23.32
+        "sharpe_ratio": 0.367,
+        "cagr": 5.24,
+        "max_drawdown_pct": -21.39,
+        "total_return_pct": 2.88
       },
-      "avg_exposure": 0.4,
-      "num_trades": 50,
+      "avg_exposure": 0.45,
+      "num_trades": 52,
       "status": "ok"
     }
   ],
@@ -205,12 +205,12 @@
         "passed": true
       },
       "avg_sharpe": {
-        "value": 0.1949,
+        "value": 0.0017,
         "threshold": 0.2,
         "passed": false
       },
       "avg_max_drawdown_pct": {
-        "value": -17.49,
+        "value": -19.1529,
         "threshold": -35.0,
         "passed": true
       }
