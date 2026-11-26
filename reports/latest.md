@@ -1,27 +1,27 @@
-# AFX AI — Daily Build Report (2026-11-25)
+# AFX AI — Daily Build Report (2026-11-26)
 
-**Daily target: ❌ MISSED**
+**Daily target: ✅ MET**
 
 | Check | Value | Threshold | Result |
 |---|---|---|---|
 | success_rate | 1.0 | 1.0 | pass |
-| avg_sharpe | 0.071 | 0.2 | FAIL |
-| avg_max_drawdown_pct | -17.7643 | -35.0 | pass |
+| avg_sharpe | 1.0506 | 0.2 | pass |
+| avg_max_drawdown_pct | -12.8843 | -35.0 | pass |
 
 **Roadmap progress (TODO.md):** 15/38 tasks complete (39.5%)
 **Next up:** Extend `config/exchanges.yaml` tickers from a handful of samples to a full listed-universe pull
 
-Run window (UTC): 2026-11-25T12:01:27.351854+00:00 → 2026-11-25T12:01:52.303539+00:00
+Run window (UTC): 2026-11-26T11:50:24.780361+00:00 → 2026-11-26T11:51:02.708217+00:00
 Targets: 7  |  Succeeded: 7  |  Failed: 0
 
 | Exchange | Ticker | Sharpe | CAGR % | Max DD % | Trades | Status |
 |---|---|---|---|---|---|---|
-| JSE | NPN | 0.043 | -4.32 | -12.76 | 49 | ok |
-| NGX | DANGCEM | -1.245 | -26.22 | -15.54 | 38 | ok |
-| NSE_KE | SCOM | -1.07 | -29.53 | -28.46 | 52 | ok |
-| EGX | COMI | 1.862 | 56.92 | -14.15 | 68 | ok |
-| GSE | MTNGH | 0.758 | 17.33 | -18.81 | 50 | ok |
-| BRVM | SNTS | -0.355 | -13.22 | -22.63 | 42 | ok |
-| CSE_MA | IAM | 0.504 | 9.78 | -12.0 | 49 | ok |
+| JSE | NPN | 0.927 | 18.97 | -8.59 | 61 | ok |
+| NGX | DANGCEM | 2.498 | 87.29 | -6.88 | 46 | ok |
+| NSE_KE | SCOM | 1.124 | 21.27 | -8.89 | 54 | ok |
+| EGX | COMI | 2.422 | 82.58 | -9.87 | 48 | ok |
+| GSE | MTNGH | 1.061 | 29.16 | -16.32 | 38 | ok |
+| BRVM | SNTS | -0.125 | -2.28 | -9.6 | 47 | ok |
+| CSE_MA | IAM | -0.553 | -17.96 | -30.04 | 58 | ok |
 
 _Synthetic-data research pipeline. Not financial advice. See README for scope._
